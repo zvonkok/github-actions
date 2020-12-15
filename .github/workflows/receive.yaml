@@ -10,6 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    - name: add go path
-      run: echo '~/go/bin' >> "$GITHUB_PATH"
+    - name: sleep
+      run: sleep 10
     
