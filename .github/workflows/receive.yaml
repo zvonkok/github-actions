@@ -16,8 +16,3 @@ jobs:
         checkName: dispatch
         ref: ${{ github.event.pull_request.head.sha || github.sha }}
 
-    - name: Do something with a passing build
-      if: steps.wait-for-build.outputs.conclusion == 'success'
-
-    - name: Do something with a failing build
-      if: steps.wait-for-build.outputs.conclusion == 'failure'
