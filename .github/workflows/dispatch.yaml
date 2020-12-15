@@ -5,7 +5,7 @@ on: push
 jobs: 
   dispatch:
     name: dispatch
-    runs-on: [self-hosted, Linux, X64]
+    runs-on: ubuntu-latest
     steps:
     - name: sleep
       run: sleep 10
