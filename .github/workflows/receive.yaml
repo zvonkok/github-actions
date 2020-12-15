@@ -1,4 +1,4 @@
-name: openshift
+name: receive
 
 on: 
   repository_dispatch:
@@ -11,5 +11,5 @@ jobs:
     steps:
 
     - name: sleep
-      run: sleep 10
+      run: sleep 11
     
