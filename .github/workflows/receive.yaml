@@ -1,0 +1,15 @@
+name: openshift
+
+on: 
+  repository_dispatch:
+    types: [image-build]
+
+jobs: 
+  openshift:
+    name: test-e2e
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: add go path
+      run: echo '~/go/bin' >> "$GITHUB_PATH"
+    

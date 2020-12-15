@@ -1,0 +1,18 @@
+name: dispatch
+
+on: push
+
+jobs: 
+  dispatch:
+    name: dispatch
+    runs-on: [self-hosted, Linux, X64]
+    steps:
+    - name: sleep
+      run: sleep 10
+  
+    - name: dispatch
+      uses: peter-evans/repository-dispatch@v1
+      with:
+        token: ${{ secrets.REPO_ACCESS_TOKEN }}
+        event-type: image-build
+        client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
