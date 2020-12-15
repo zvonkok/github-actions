@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: sleep
-      run: sleep 10
+      run: sleep 11
   
     - name: dispatch
       uses: peter-evans/repository-dispatch@v1
