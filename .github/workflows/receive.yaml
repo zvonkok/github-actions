@@ -1,8 +1,6 @@
 name: receive
 
-on: 
-  repository_dispatch:
-    types: [image-build]
+on: push 
 
 jobs: 
   openshift:
