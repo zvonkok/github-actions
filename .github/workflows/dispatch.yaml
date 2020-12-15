@@ -10,9 +10,4 @@ jobs:
     - name: sleep
       run: sleep 11
   
-    - name: dispatch
-      uses: peter-evans/repository-dispatch@v1
-      with:
-        token: ${{ secrets.REPO_ACCESS_TOKEN }}
-        event-type: image-build
-        client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
+  

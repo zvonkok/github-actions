@@ -13,3 +13,11 @@ jobs:
     - name: sleep
       run: sleep 11
     
+    - name: Wait for build to succeed
+      uses: fountainhead/action-wait-for-check@v1.0.0
+      id: dispatch
+      with:
+        token: ${{ secrets.REPO_ACCESS_TOKEN }}
+        checkName: dispatch
+        ref: ${{ github.event.pull_request.head.sha || github.sha }}
+
